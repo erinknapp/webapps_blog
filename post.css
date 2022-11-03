@@ -17,8 +17,11 @@ body{
     color: var(--dark);
 }
 img{
-    width: 100%;
+    width: 35%;
     display: block;
+    padding-top: 100px;
+    padding-left: 20px;
+    float: left;
 }
 .container{
     max-width: 1320px;
@@ -27,13 +30,13 @@ img{
 }
 
 /* header */
-header{
+/* header{
     min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/cole-miller-Vit4aJh0YQE-unsplash.jpg) center/cover no-repeat fixed;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
-}
+} */
 .stickybar {
     position: sticky;
     position: -webkit-sticky;
@@ -75,39 +78,11 @@ header{
 .navbar-nav a:hover{
     opacity: 0.7;
 }
-.banner{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-}
-.banner-title{
-    font-size: 3rem;
-    font-family: var(--Playfair);
-    line-height: 1.2;
-}
-.banner-title span{
-    font-family: var(--Playfair);
-    color: rgb(202, 188, 188);
-}
-.banner p{
-    padding: 1rem 0 2rem 0;
-    font-size: 1.2rem;
-    text-transform: capitalize;
-    font-family: var(--Roboto);
-    font-weight: 300;
-    word-spacing: 2px;
-}
-.banner form{
-    background: #fff;
-    border-radius: 2rem;
-    padding: 0.6rem 1rem;
-    display: flex;
-    justify-content: space-between;
-}
+/* post */
 
+
+
+/* post */
 
 /* blog */
 .blog{
@@ -132,6 +107,10 @@ header{
 .blog-text{
     margin: 2.2rem 0;
     padding: 0 1rem;
+    float: right;
+    padding-top: 100px;
+    width: 50%;
+    margin-right: 20px;
 }
 .blog-text span{
     font-weight: 300;
@@ -165,25 +144,19 @@ header{
     background: var(--exDark);
 }
 
-/* about */
-.about{
-    padding: 4.5rem 0;
-}
-.about-text{
-    margin: 2rem 0;
-}
-.about-text > p{
-    font-size: 1.1rem;
-    padding: 0.6rem 0;
-    opacity: 0.8;
-}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 
 /* footer */
 footer{
+    clear: both;
     background: var(--exDark);
     color: #fff;
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 .social-links{
     display: flex;
@@ -222,15 +195,6 @@ footer{
         padding-right: 1.2rem;
         padding-left: 1.2rem;
     }
-    .banner-title{
-        font-size: 5rem;
-    }
-    .banner form{
-        margin-top: 1.4rem;
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-    }
 }
 
 @media screen and (min-width: 768px){
@@ -238,22 +202,5 @@ footer{
         display: flex;
         align-items: center;
         justify-content: space-between;
-    }
-    .blog-content{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-}
-
-@media screen and (min-width: 992px){
-    .blog-content{
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .about-content{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 3rem;
-        align-items: center;
     }
 }
